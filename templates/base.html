@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dist/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <title>{% block title %}My BookStore{% endblock %}</title>
+</head>
+
+<body>
+    {% include "components/navbar.html" %}
+    <h1 class="text-2xl bg-red-800">You</h1>
+
+    <main id="content">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "components/footer.html" %}
+
+    {% load django_browser_reload %}
+    {% django_browser_reload_script %}
+</body>
+</html>
