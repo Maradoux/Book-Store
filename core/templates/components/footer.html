@@ -1,0 +1,54 @@
+{% load static %}
+
+<footer class="bg-black w-full h-[50vh] flex flex-col justify-evenly items-center px-4 md:px-5 py-3">
+    <div class="grid grid-cols-3 justify-around items-center gap-6">
+        <h3 class="text-white font-bold text-lg text-center md:text-2xl uppercase">lit<span class="text-red-500">corner</span></h3>
+
+        <div class="flex justify-center gap-5 mx-auto">
+            <a href="#" class="text-white hover:text-red-500 hover:font-bold text-sm">Home</a>
+            <a href="#" class="text-white hover:text-red-500 hover:font-bold text-sm">Books</a>
+            <a href="#" class="text-white hover:text-red-500 hover:font-bold text-sm">About</a>
+            <a href="#" class="text-white hover:text-red-500 hover:font-bold text-sm">Contact</a>
+        </div> 
+
+        <form action="email" class="px-5">
+            <label for="email" class="text-white text-center text-[13px]">Subscribe for Newsletters</label>
+            <input type="email" name="email" id="" class="border border-white/50 rounded-md p-1">
+        </form>
+        
+    </div>
+
+    <div class="grid grid-cols-3  justify-around gap-6">
+        <ul class="flex gap-2 mx-auto">
+            <li>
+                <a href="#"  class="w-5 h-5 border border-white/50 rounded-full p-2 hover:bg-gray-200 text-white hover:text-black">
+                    <i class="fa-brands fa-facebook-f "></i>
+                </a>    
+            </li>
+            <li >
+                <a href="#" class="w-5 h-5 border border-white/50 rounded-full p-2 hover:bg-gray-200 text-white hover:text-black">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="w-5 h-5 border border-white/50 rounded-full p-2 hover:bg-gray-200 text-white hover:text-black">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </li>
+            <li >
+                <a href="#" class="w-5 h-5 border border-white/50 rounded-full p-2 hover:bg-gray-200 text-white hover:text-black">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    
+                </a>
+            </li>
+        </ul>
+
+        <p class="text-wrap text-[14px] text-slate-400 mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure placeat nobis id tempora.</p>
+
+        <div class="flex space-x-2 mx-auto">
+            <img src="{% static "core/images/visa.png" %}" class="w-10 h-10" alt="">
+            <img src="{% static "core/images/master_card.png" %}" class="w-10 h-10" alt="">
+            <img src="{% static "core/images/paypal.png" %}" class="w-10 h-10" alt="">
+        </div>
+    </div>
+</footer>
