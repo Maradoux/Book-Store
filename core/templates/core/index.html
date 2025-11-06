@@ -1,12 +1,32 @@
 {% extends "base.html" %}
 {% load static %}
 
-<section>
-    <div class="container">
-        <div class="slide">
-            <div class="item">
-                
+{% block content %}
+<section class="home">
+    <div class="content">
+        <h1 class="text-5xl font-bold  uppercase tracking-tight leading-15 mb-10">Get the latest <span class="text-red-500">books</span> and novels</span></h1>
+        <p class="text-lg font-semibold mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nam quaerat recusandae at dicta est voluptatem id aliquid deleniti soluta!</p>
+        <form action="search">
+            <input type="text">
+        </form>
+        <a href="http://" class="bg-red-400 px-7 py-5 text-xl rounded-md text-white">Buy Now</a>
+    
+    </div>
+    <div class="pictures">
+        <div class="pic1">
+            <img src="{% static "core/images/hero_book_two.jpg" %}" alt="">
+        </div>
+        <div class="pic2">
+            <div>
+                <img src="{% static "core/images/hero_book_one.jpg" %}" alt="">
             </div>
+            <div>
+                <img src="{% static "core/images/herp_book_three.jpg" %}" alt="">
+            </div>
+            
         </div>
     </div>
 </section>
+
+{% endblock content %}
+
