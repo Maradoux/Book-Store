@@ -2,31 +2,92 @@
 {% load static %}
 
 {% block content %}
-<section class="home">
-    <div class="content">
-        <h1 class="text-5xl font-bold  uppercase tracking-tight leading-15 mb-10">Get the latest <span class="text-red-500">books</span> and novels</span></h1>
-        <p class="text-lg font-semibold mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nam quaerat recusandae at dicta est voluptatem id aliquid deleniti soluta!</p>
-        <form action="search">
-            <input type="text">
-        </form>
-        <a href="http://" class="bg-red-400 px-7 py-5 text-xl rounded-md text-white">Buy Now</a>
-    
-    </div>
-    <div class="pictures">
-        <div class="pic1">
-            <img src="{% static "core/images/hero_book_two.jpg" %}" alt="">
+<section class="first-section">
+    <div class="home-slide first-container active grid grid-cols-3 gap-3 items-center">
+        <div class="content col-span-2">
+            <h1 class="text-5xl font-bold  uppercase tracking-tight leading-15 mb-10">Get the latest <span class="text-red-500">books</span> and novels</h1>
+            <p class="text-lg font-semibold mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, nam quaerat recusandae at dicta est voluptatem id aliquid deleniti soluta!</p>
+            <form action="search" class="mb-6">
+                <input type="text" placeholder="Search for a book..." class="border border-gray-300 px-4 py-2 rounded-md w-full max-w-md">
+            </form>
+            <a href="http://" class="bg-red-400 hover:bg-red-500 px-7 py-4 text-xl rounded-md text-white transition">Buy Now</a>
+        
         </div>
-        <div class="pic2">
-            <div>
-                <img src="{% static "core/images/hero_book_one.jpg" %}" alt="">
+        <div class="pictures col-span-1 flex flex-row gap-4">
+            <div class="flex flex-col justify-center align-middle items-end">
+                <div class="pic1 w-[200px] h-[300px] overflow-hidden"> 
+                    <img src="{% static "core/images/hero_book_two.jpg" %}" alt="" class="w-full h-full object-cover">
+                </div>
             </div>
-            <div>
-                <img src="{% static "core/images/herp_book_three.jpg" %}" alt="">
+            <div class="pictures2 flex flex-col gap-3">
+                <div class="w-[150px] h-[250px] overflow-hidden">
+                    <img src="{% static "core/images/hero_book_one.jpg" %}" alt="" class="w-full h-full object-cover">
+                </div>
+                <div class="w-[150px] h-[250px] overflow-hidden">
+                    <img src="{% static "core/images/herp_book_three.jpg" %}" alt="" class="w-full h-full object-cover">
+                </div>            
+            </div>
+        </div>
+    </div>
+
+    <div class="home-slide">
+        <div class=" bg-[url('/static/core/images/2150104564.jpg')] bg-cover bg-center h-[100vh] w-full">
+            <div class="first-container bg-black/30 h-[100vh] w-full">
+                <div class="flex gap-3 items-center py-7">
+                    <div class="flex flex-col gap-6 align-middle py-10 w-full">
+                        <h2 class="text-white text-5xl uppercase tracking-tight leading-15">Get <span class="text-red-500">30%</span> off <br> <span class="text-white text-3xl tracking-tight normal-case leading-15">when you purchase 15+ books on the available categories</span> </h2> 
+                        <a href="http://" class="bg-black/50  hover:bg-white/50 px-5 py-3 w-[250px] text-2xl rounded-md text-red-500 transition">View Books <i class="fa-classic fa-arrow-right-long ml-3"></i></a>
+                    </div>
+                    <div class="categories flex flex-col justify-items-center gap-[60px] w-full">
+                        <ul class="grid grid-cols-4 gap-6">
+                            <li>Thriller</li>
+                            <li>Sci-fi Fiction</li>
+                            <li>Romance</li>
+                            <li>Contempoary</li>
+                        </ul>
+                        <ul class="grid grid-cols-3 gap-6">
+                            <li>Crime</li>
+                            <li>Documentary</li>
+                            <li>Business</li>
+                        </ul>
+                        <ul class="grid grid-cols-4 gap-6">
+                            <li>Games</li>
+                            <li>Children</li>
+                            <li>Education</li>
+                            <li>Recipee</li>
+                        </ul>
+                    </div>
+                </div>
+                
+
             </div>
             
         </div>
     </div>
+    
+    <div class="home-slide">
+        <div class="bg-[url('/static/core/images/2150293524.jpg')] bg-cover bg-center h-[100vh] w-full">
+            <div class="first-container bg-black/30 h-[100vh] w-full">
+                <div class="flex gap-3 items-center py-7">
+                    <div class="flex flex-col gap-6 align-middle py-10 w-full">
+                        <h2 class="text-white text-5xl uppercase tracking-tight leading-15">Join a Book Club close to your location</h2> 
+                        <a href="http://" class="bg-black/50  hover:bg-white/50 px-5 py-3 w-[200px] text-2xl rounded-md text-red-500 transition">Join now <i class="fa-classic fa-location-dot ml-1"></i></a>
+                    </div>
+                    
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="slider-nav">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+    </div>
 </section>
+
 
 {% endblock content %}
 
